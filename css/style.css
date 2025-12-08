@@ -405,3 +405,50 @@ ul li a:hover {
     max-width: 320px;
   }
 }
+/* =============================== */
+/*     COMPLEMENTO MODAL IMG       */
+/*   (SIN MODIFICAR EL RESTO)      */
+/* =============================== */
+
+.img-modal-content {
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+/* Imagen dentro del modal */
+#modalImg {
+  width: 100%;
+  max-width: 100%;
+  max-height: 50vh;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 12px;
+}
+
+/* Título del modal */
+#modalTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin: 8px 0;
+}
+
+/* Texto del modal con scroll */
+#modalInfo {
+  max-height: 20vh;
+  overflow-y: auto;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* Ajustes extra para móvil */
+@media (max-width: 480px) {
+  .img-modal-content {
+    max-height: 95vh;
+  }
+
+  #modalImg {
+    max-height: 40vh;
+  }
+}
