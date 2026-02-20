@@ -18,7 +18,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   background: var(--bg-main);
@@ -90,7 +91,7 @@ nav a {
 
 nav a:hover {
   color: var(--accent);
-  background: rgba(232,161,90,0.15);
+  background: rgba(232, 161, 90, 0.15);
 }
 
 /* =============================== */
@@ -123,7 +124,7 @@ nav a:hover {
   max-width: 320px;
   height: 100%;
   background: #f8f9fb;
-  box-shadow: -3px 0 8px rgba(0,0,0,0.25);
+  box-shadow: -3px 0 8px rgba(0, 0, 0, 0.25);
   padding: 2rem;
   z-index: 1000;
 }
@@ -155,7 +156,7 @@ nav a:hover {
   background: var(--blue-mid);
   padding: 30px;
   color: white;
-  box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.07);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.07);
 }
 
 .hero h1 {
@@ -255,8 +256,13 @@ ul li a:hover {
 }
 
 @keyframes scrollTape {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* =============================== */
@@ -272,17 +278,34 @@ ul li a:hover {
   max-width: 420px;
 }
 
-.img-box img {
+/* =============================== */
+/*        IMÁGENES ESTÁNDAR        */
+/* =============================== */
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.img-box {
   width: 100%;
-  max-height: 320px;
+  max-width: 450px;
+  /* Tamaño máximo en computadora */
+  height: 280px;
+  /* Altura fija uniforme */
   object-fit: contain;
-  cursor: zoom-in;
-  border-radius: 6px;
+  /* Mantiene proporción sin deformar */
+  background: white;
+  border: 1px solid var(--grey-border);
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.25s ease;
 }
 
-.img-box img:hover {
-  transform: scale(1.08);
+.img-box:hover {
+  transform: scale(1.04);
 }
 
 .btn-ver-img {
@@ -307,7 +330,7 @@ ul li a:hover {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0, 0, 0, 0.55);
   justify-content: center;
   align-items: center;
   z-index: 9999;
@@ -405,6 +428,7 @@ ul li a:hover {
     max-width: 320px;
   }
 }
+
 /* =============================== */
 /*     COMPLEMENTO MODAL IMG       */
 /*   (SIN MODIFICAR EL RESTO)      */
